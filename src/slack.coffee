@@ -99,7 +99,8 @@ class Slack extends Adapter
     id       : req.param 'user_id'
     name     : req.param 'user_name'
     reply_to : req.param 'channel_id'
-    room     : req.param 'channel_name'
+    # Hack to make non-direct messages replyable
+    room     : req.param 'channel_id'
 
 
   ###################################################################
